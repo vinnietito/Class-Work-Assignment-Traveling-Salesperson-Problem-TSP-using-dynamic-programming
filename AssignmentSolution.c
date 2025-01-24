@@ -4,7 +4,6 @@
 #define INF INT_MAX
 #define N 4
 
-// Define the graph (distance matrix)
 int graph[N][N] = {
     {0, 14, 21, 22},
     {14, 0, 3, 4},
@@ -12,9 +11,7 @@ int graph[N][N] = {
     {22, 4, 5, 0}
 };
 
-// Function to find the minimum distance
 int tsp(int mask, int pos, int dp[N][1 << N]) {
-    // Base case: All cities visited, return to starting point
     if (mask == (1 << N) - 1) {
         return graph[pos][0];
     }
