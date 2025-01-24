@@ -16,18 +16,16 @@ int tsp(int mask, int pos, int dp[N][1 << N]) {
         return graph[pos][0];
     }
 
-    // Check if the solution is already computed
     if (dp[pos][mask] != -1) {
         return dp[pos][mask];
     }
 
     int ans = INF;
 
-    // Try visiting all cities
     for (int city = 0; city < N; city++) {
-        if ((mask & (1 << city)) == 0) { // If city not visited
+        if ((mask & (1 << city)) == 0) { 
             int newAns = graph[pos][city] + tsp(mask | (1 << city), city, dp);
-            ans = (ans < newAns) ? ans : newAns; // Take the minimum
+            ans = (ans < newAns) ? ans : newAns;
         }
     }
 
