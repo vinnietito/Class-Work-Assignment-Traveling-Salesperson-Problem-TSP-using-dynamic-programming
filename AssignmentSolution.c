@@ -36,11 +36,11 @@ int main() {
     int dp[N][1 << N];
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < (1 << N); j++) {
-            dp[i][j] = -1; // Initialize DP table
+            dp[i][j] = -1;
         }
     }
 
-    int result = tsp(1, 0, dp); // Start from city 0
+    int result = tsp(1, 0, dp);
     printf("The shortest distance is: %d\n", result);
 
     return 0;
