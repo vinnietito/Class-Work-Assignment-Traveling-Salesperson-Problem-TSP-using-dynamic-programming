@@ -2,7 +2,7 @@
 #include <limits.h>
 
 #define INF INT_MAX
-#define N 4 // Number of cities
+#define N 4
 
 // Define the graph (distance matrix)
 int graph[N][N] = {
