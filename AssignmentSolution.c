@@ -43,6 +43,6 @@ int main() {
     int result = tsp(1, 0, dp);
     printf("The shortest distance is: %d\n", result);
 
-    return 0;
+    
 }
 
